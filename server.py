@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, request, redirect
 import csv
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def html_page(page_name):
     return render_template(page_name)
 
 
-def write_to_file(data):
+def write_to_txt(data):
     with open('database.txt', 'a') as database:
         email = data['email']
         subject = data['subject']
